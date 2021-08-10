@@ -235,11 +235,11 @@ let usersList = [
     }
   }
 ];
-
+let classListWrap = 'wrap'
 
 export default function App() {
   return (
-    <div className="">
+    <div className="wrap">
        <User user={usersList} i={0}/>
        <User user={usersList} i={1}/>
        <User user={usersList} i={2}/>
