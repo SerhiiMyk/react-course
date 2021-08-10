@@ -1,5 +1,6 @@
 import './App.css'
-import Simpson from "./components/simpson/Simpson";
+
+import Simpson from "./Components/simpson/Simpson";
 export default function App() {
     let classNameTitle = 'simpson';
     let simpsons = [
@@ -41,7 +42,6 @@ export default function App() {
     ];
   return (
       <Simpson value={simpsons}/>
-
   );
 }
 
