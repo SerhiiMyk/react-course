@@ -1,5 +1,8 @@
 import './App.css';
-import User from "./components/user/User";
+import User from "./Components/user/User";
+
+
+
 let usersList = [
   {
     id: 1,
@@ -233,10 +236,12 @@ let usersList = [
   }
 ];
 
-function User() {
+export default function App() {
   return (
     <div className="">
-
+       <User user={usersList} i={0}/>
+       <User user={usersList} i={15}/>
+       <User user={usersList} i={2}/>
     </div>
   );
 }
