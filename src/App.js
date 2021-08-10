@@ -1,4 +1,5 @@
 import './App.css';
+import './Components/user/User.css';
 import User from "./Components/user/User";
 
 
@@ -235,7 +236,7 @@ let usersList = [
     }
   }
 ];
-let classListWrap = 'wrap'
+let classNameWrap = 'wrap'
 
 export default function App() {
   return (
