@@ -1,11 +1,11 @@
 import './Simpson.css'
 
 export default function Simpson({value}) {
-    let classNameTitle = 'simpson'
+    let classNameWrap = 'wrap'
     let classNameSubDiv = 'subDiv'
     let classNameImgDiv = 'imgDiv'
     return (
-        <div className='simpson'>
+        <div className='wrap'>
             <div className='subDiv'>
                 <h2>{value[0].name} - {value[0].surname} - {value[0].age}</h2>
                 <p>{value[0].info}</p>
