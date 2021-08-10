@@ -2,18 +2,17 @@ import Adress from "../adress/Adress";
 
 export default function User({user, i}) {
     if (i > user.length) return <h2>This is user undefined</h2>
+    let userId = user[i]
     return (
         <div>
 
-            <div>
-                <h3>id - {user[i].id}</h3>
-                <h3>name - {user[i].name}</h3>
-                <h3>username -{user[i].username}</h3>
-                <h3>email -{user[i].email}</h3>
+            <h3>id - {userId.id}</h3>
+            <h3>name - {userId.name}</h3>
+            <h3>username -{userId.username}</h3>
+            <h3>email -{userId.email}</h3>
 
-                <hr/>
-                {/*<Adress user={user}/>*/}
-            </div>
+            <hr/>
+            <Adress userId={userId}/>
 
         </div>
 

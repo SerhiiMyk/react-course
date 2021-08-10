@@ -236,12 +236,20 @@ let usersList = [
   }
 ];
 
+
 export default function App() {
   return (
     <div className="">
        <User user={usersList} i={0}/>
-       <User user={usersList} i={15}/>
+       <User user={usersList} i={1}/>
        <User user={usersList} i={2}/>
+       <User user={usersList} i={3}/>
+       <User user={usersList} i={4}/>
+       <User user={usersList} i={5}/>
+       <User user={usersList} i={6}/>
+       <User user={usersList} i={7}/>
+       <User user={usersList} i={8}/>
+       <User user={usersList} i={9}/>
     </div>
   );
 }
