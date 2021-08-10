@@ -1,5 +1,5 @@
 import './App.css';
-
+import User from "./components/user/User";
 let usersList = [
   {
     id: 1,
@@ -235,13 +235,12 @@ let usersList = [
 
 function User() {
   return (
-    <div className="App">
+    <div className="">
 
     </div>
   );
 }
 
-export default App;
 
 // Взяти масив usersList.
 // Створити компонент,котрий характеризує юзера.
