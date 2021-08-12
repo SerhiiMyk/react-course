@@ -14,10 +14,4 @@ const getUser = async (id) => {
     return user;
 };
 
-const getPostsOfUser = async (id) => {
-    let post = await fetch(url + '/' + id + '/posts')
-        .then(value => value.json());
-    return post;
-};
-
-export {getUsers, getUser, getPostsOfUser};
+export {getUsers, getUser};

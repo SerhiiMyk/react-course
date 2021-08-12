@@ -1,12 +1,12 @@
 import Post from "../post/Post";
 
-export default function Posts({items}) {
+export default function Posts({posts}) {
     return (
         <div>
             {
-                items.map(value => (
+                posts.map(value => (
                         <Post
-                            item={value}
+                            post={value}
                             key={value.id}
                         />
                     )

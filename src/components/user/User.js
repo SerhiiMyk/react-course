@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {getPostsOfUser} from "../../services/user.service";
+import {getPostsOfUser} from "../../services/post.service";
 import Posts from "../posts/Posts";
 import Address from "../address/Address";
 
@@ -15,7 +15,9 @@ export default function User({item: userItem}) {
             <div>
                 <h2>{userItem.id} {userItem.name}</h2>
                 <Address address = {address}/>
-                <Posts items={posts}/>
+                <hr/>
+                <Posts posts={posts}/>
+
             </div>
 
         </div>
