@@ -11,13 +11,11 @@ export default function Post({post:{id,title,userId}}) {
 
 
     return (
-
         <div>
             {userId} - {title}
 
             <hr/>
             <Comments comments={comments}/>
-
 
         </div>
     );
