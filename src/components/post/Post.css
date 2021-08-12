@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-.user {
+.post {
     width: 40%;
     background-color: silver;
     margin: 20px 0;
@@ -17,6 +17,6 @@
 
 }
 
-.user h2 {
+.post h2 {
     background-color: tomato;
 }

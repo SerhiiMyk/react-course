@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-.user {
+.comment {
     width: 40%;
     background-color: silver;
     margin: 20px 0;
@@ -17,6 +17,6 @@
 
 }
 
-.user h2 {
+.comment h2 {
     background-color: tomato;
 }

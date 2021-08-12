@@ -1,6 +1,7 @@
 import Post from "../post/Post";
 import {useEffect, useState} from "react";
 import {getPosts} from "../../services/post.service";
+import '../post/Post.css'
 
 export default function Posts() {
 
@@ -12,8 +13,7 @@ export default function Posts() {
 
 
     return (
-        <div>
-
+        <div className='wrap'>
             {
                 posts.map(value => (
                         <Post

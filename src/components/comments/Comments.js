@@ -1,6 +1,7 @@
 import Comment from "../comment/Comment";
 import {useEffect, useState} from "react";
 import {getComments} from "../../services/comment.service";
+import '../comment/Comment.css'
 
 export default function Comments() {
 
@@ -14,7 +15,7 @@ export default function Comments() {
 
 
   return (
-    <div>
+    <div className='wrap'>
       {
         comments.map(value=>(
             <Comment

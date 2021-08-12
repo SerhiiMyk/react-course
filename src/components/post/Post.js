@@ -1,15 +1,21 @@
+import './Post.css'
 export default function Post({post:{id,title,userId,body}}) {
 
     return (
 
-        <div>
-            <h2>userId: {userId}</h2>
-            <h4>id: {id}</h4>
-            <h4>title: {title}</h4>
-            <p>body: <br/>{body}</p>
-
+        <div className='post'>
+            <h2>user: {userId}</h2>
             <hr/>
-
+            <h4>post: {id}</h4>
+            <hr/>
+            <p>
+                <strong>title:</strong> {title}
+            </p>
+            <hr/>
+            <p>
+                <strong>body:</strong> <br/>
+                {body}
+            </p>
 
         </div>
     );

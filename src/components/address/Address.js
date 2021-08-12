@@ -6,6 +6,7 @@ export default function Address({address: {city, street,suite, zipcode,geo}}) {
     address: <br/>
     city - {city}, street - {street} <br/>
     suite - {suite}, zipcode - {zipcode}
+    <hr/>
     <Geo geo={geo}/>
     </div>
   );

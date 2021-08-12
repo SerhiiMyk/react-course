@@ -1,13 +1,26 @@
-
+import './Comment.css'
 export default function Comment({comment:{id,name,email,postId,body}}) {
 
     return (
-        <div>
+        <div className='comment'>
             <h2>postId: {postId}</h2>
-            <h4>id: {id}</h4>
-            <h4>name: {name}</h4>
-            <h4>email: {email}</h4>
-            <p>body: <br/>{body}</p>
+            <hr/>
+
+            <h4>comment: {id}</h4>
+            <hr/>
+            <p>
+                <strong>name:</strong>
+                {name}
+            </p>
+            <p>
+                <strong>email:</strong>
+                {email}
+            </p>
+            <hr/>
+            <p>
+                <strong>body:</strong> <br/>
+                {body}
+            </p>
             <hr/>
         </div>
     );

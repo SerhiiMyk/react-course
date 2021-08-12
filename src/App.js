@@ -3,16 +3,15 @@ import Posts from "./components/posts/Posts";
 import Comments from "./components/comments/Comments";
 
 
-
 export default function App() {
   return (
-    <div className='wrap'>
+    <div>
 
      <Users/>
 
-     {/*<Posts/>*/}
+     <Posts/>
 
-     {/*<Comments/>*/}
+     <Comments/>
 
     </div>
   );
