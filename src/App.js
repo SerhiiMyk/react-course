@@ -6,13 +6,13 @@ import Comments from "./components/comments/Comments";
 
 export default function App() {
   return (
-    <div>
+    <div className='wrap'>
 
      <Users/>
 
-     <Posts/>
+     {/*<Posts/>*/}
 
-     <Comments/>
+     {/*<Comments/>*/}
 
     </div>
   );

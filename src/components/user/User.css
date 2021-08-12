@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.user {
+    background-color: silver;
+    margin: 20px 0;
+    width: 30%;
+    text-align: center;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*#userId {*/
+/*    background-color: tomato;*/
+/*}*/
