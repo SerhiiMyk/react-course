@@ -1,13 +1,13 @@
 import User from "../user/User";
 import {useEffect, useState} from "react";
-import {getUsers} from "../../services/user.fetch";
+import {getUsers,getPostsOfUser} from "../../services/user.fetch";
 import './Users.css'
-import {getPostsOfUser} from "../../services/post.service";
 
 
 export default function Users() {
     let [users, setUsers] = useState([]);
-    let [user, setUser] = useState(null);
+    let [user, setUser] = useState([]);
+    let [posts, setPosts] = useState(null);
 
     useEffect(() => {
         getUsers().then(value => setUsers([...value]));
@@ -15,9 +15,9 @@ export default function Users() {
 
     const choseUser = (u) => {
         setUser({...u});
-        getPostsOfUser(u.id).then(value => console.log(value));
+        getPostsOfUser(u.id).then(value =>
+            setPosts([...value]));
     }
-
 
     return (
         <div className={'wrap'}>
@@ -32,8 +32,15 @@ export default function Users() {
                         />)
                 }
             </div>
+            {
 
-            {user && <div className={'chosen-one'}>{JSON.stringify(user)}</div>}
+            posts &&
+            (<div className={'chosen-one'}>
+                {posts.map(value => <div>- {value.title}</div>)}
+            </div>)
+
+            }
+
 
         </div>
     );
