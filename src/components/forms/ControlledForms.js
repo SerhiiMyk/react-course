@@ -33,6 +33,7 @@ export default function ControlledForms() {
                 <input type="submit"/>
             </form>
             <div>{JSON.stringify(car)}</div>
+            <div>getCars</div>
 
         </div>
     );
