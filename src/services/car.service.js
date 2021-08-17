@@ -1,5 +1,5 @@
 export const saveCar= ({model,price,year}) => {
-    return fetch('http://192.168.1.253/api/v1/cars', {
+    return fetch('http://195.72.146.25/api/v1/cars', {
         method: 'POST',
         body: JSON.stringify({model,price,year}),
         headers: {
