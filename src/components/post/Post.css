@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.post li {
+    margin-left: 10px;
+}
+.post button {
+    margin: 10px 0 0 5%;
+    width: 90%;
+
+}
+

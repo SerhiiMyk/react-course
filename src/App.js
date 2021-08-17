@@ -1,19 +1,24 @@
-import Users from "./components/users/Users";
 import './App.css'
+import Posts from "./components/posts/Posts";
+import Comments from "./components/comments/Comments";
 
 export default function App() {
 
     return (
         <div>
 
+            <Posts/>
 
-            <Users/>
-
+            {/*<Comments/>*/}
 
         </div>
     );
 }
 
-// Отримати всі user з jsonplaceholder та вивести їх. до кожного user зробити кнопку при натисканні якої виводиться всі пости поточного юзера в межах Users компоненти
+// 1
+// Отримати всі пости з jsonplaceholder та вивести їх. до кожного поста зробити кнопку при натисканні якої виводиться біль детальна інформація про пост в середині Posts компоненти
+// 2
+//
+// Отримати всі коментарі з jsonplaceholder та вивести їх. до кожного поста зробити кнопку при натисканні якої виводиться біль детальна інформація про коментар в середині Comments компоненти
 
 

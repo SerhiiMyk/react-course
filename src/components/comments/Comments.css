@@ -1,0 +1,25 @@
+.wrap{
+    display: flex;
+}
+.wrap>div{
+    width: 50%;
+}
+
+.comments-box{
+    background-color: silver;
+    padding-top: 20px;
+}
+.comments-box h2{
+text-align: center;
+}
+.comment-details{
+    background-color: cornsilk;
+    padding-top: 20px;
+}
+.comment-details li{
+    padding: 5px 0 0 20px;
+}
+.comment-details h2{
+    text-align: center;
+    margin-bottom: 20px;
+}

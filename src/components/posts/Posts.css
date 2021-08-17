@@ -1,0 +1,27 @@
+.wrap{
+    display: flex;
+}
+.wrap>div{
+    width: 50%;
+}
+.posts-box{
+    background-color: silver;
+    padding-top: 20px;
+}
+
+.posts-box h2{
+    text-align: center;
+}
+
+.post-details{
+    background-color: cornsilk;
+    padding-top: 20px;
+}
+.post-details li{
+    padding: 5px 0 0 20px;
+}
+.post-details h2{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
