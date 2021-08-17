@@ -16,4 +16,4 @@ const getCars = ()=>{
         .then((json) => console.log(json));
 }
 
-export({saveCar, getCars});
+export{saveCar, getCars}

@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {saveCar} from "../../services/car.service";
+import {getCars, saveCar} from "../../services/car.service";
 
 export default function ControlledForms() {
 
@@ -33,7 +33,7 @@ export default function ControlledForms() {
                 <input type="submit"/>
             </form>
             <div>{JSON.stringify(car)}</div>
-            <div>getCars</div>
+            <div> {getCars}</div>
 
         </div>
     );
