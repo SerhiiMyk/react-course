@@ -1,4 +1,4 @@
-export const saveCar= ({model,price,year}) => {
+const saveCar= ({model,price,year}) => {
     return fetch('http://192.168.1.253/api/v1/cars', {
         method: 'POST',
         body: JSON.stringify({model,price,year}),
@@ -9,3 +9,11 @@ export const saveCar= ({model,price,year}) => {
         .then((response) => response.json())
         .then((json) => console.log(json));
 }
+
+const getCars = ()=>{
+    fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+}
+
+export({saveCar},{getCars});
