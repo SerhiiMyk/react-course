@@ -15,7 +15,7 @@ const saveCar = ({model, price, year}) => {
 const getCars = () => {
     return fetch(url)
         .then((response) => response.json())
-        .then((json) => console.log(json));
+
 }
 
 export {saveCar, getCars}
