@@ -27,10 +27,10 @@ export default function ControlledForms() {
     return (
         <div>
             <form onSubmit={onSubmitForm}>
-                <input type="model" model={'model'} value={model} onInput={onInputChangeModel}/>
-                <input type="price" price={'price'} value={price} onInput={onInputChangePrice}/>
-                <input type="year" year={'year'} value={year} onInput={onInputChangeYear}/>
-                <input type="submit"/>
+                <input type="text" model={'model'} value={model} onInput={onInputChangeModel}/>
+                <input type="number" price={'price'} value={price} onInput={onInputChangePrice}/>
+                <input type="number" year={'year'} value={year} onInput={onInputChangeYear}/>
+                <input type="submit" value={'save'}/>
             </form>
             <div>{JSON.stringify(car)}</div>
 
