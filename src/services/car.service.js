@@ -1,7 +1,9 @@
-const saveCar= ({model,price,year}) => {
-    return fetch('http://192.168.1.253/api/v1/cars', {
+let url = 'http://195.72.146.25/api/v1/cars'
+
+const saveCar = ({model, price, year}) => {
+    return fetch(url, {
         method: 'POST',
-        body: JSON.stringify({model,price,year}),
+        body: JSON.stringify({model, price, year}),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },
@@ -10,10 +12,10 @@ const saveCar= ({model,price,year}) => {
         .then((json) => console.log(json));
 }
 
-const getCars = ()=>{
-    fetch('https://jsonplaceholder.typicode.com/posts/1')
+const getCars = () => {
+    fetch(url)
         .then((response) => response.json())
         .then((json) => console.log(json));
 }
 
-export{saveCar, getCars}
+export {saveCar, getCars}
