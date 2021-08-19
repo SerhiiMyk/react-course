@@ -1,11 +1,10 @@
 import './App.css';
 import ControlledForms from "./components/forms/ControlledForms";
-import Cars from "./components/cars/Cars";
+
 function App() {
   return (
     <div>
-        {/*<ControlledForms/>*/}
-        <Cars/>
+        <ControlledForms/>
     </div>
   );
 }
@@ -21,12 +20,12 @@ export default App;
 //
 // документация и API обновлена и находится по одной их ссылок:
 //     http://195.72.146.25/
-//         http://192.168.1.253/
+//     http://192.168.1.253/
 //
 //
-//             Створити форму з select.
-//     Отримати всіх юзерів з плейсхолдеру. option для кожного юзера.
-//     Оборавши конкретного юзера в цьому select відтворити його пости рівні App
+// Створити форму з select.
+// Отримати всіх юзерів з плейсхолдеру. option для кожного юзера.
+// Оборавши конкретного юзера в цьому select відтворити його пости рівні App
 // Ієрархія
 // App-UserSelectComponent
 // App-Posts-Post

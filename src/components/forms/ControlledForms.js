@@ -1,40 +1,40 @@
 import {useState} from "react";
-import {getCars, saveCar} from "../../services/car.service";
+import {putCar, saveCar} from "../../services/car.service";
+import Cars from "../cars/Cars";
 
 export default function ControlledForms() {
 
-    let [model, setModel] = useState('model')
-    let [price, setPrice] = useState('price')
-    let [year, setYear] = useState('year')
     let [car, setCar] = useState({model: '', price: '', year: ''})
+    let [carId, setCarId] = useState({})
 
-    const onSubmitForm = (event) => {
-        event.preventDefault()
-        let tempCar = {model, price, year}
-        setCar({...tempCar});
-        saveCar(tempCar)
+    function onChangeFunk(e) {
+        setCar({...car, [e.target.name]: e.target.value});
     }
-
-    let onInputChangeModel = (event) => {
-        setModel(event.target.value)
+    function saveC(e) {
+        saveCar(car);
     }
-    let onInputChangePrice = (event) => {
-        setPrice(event.target.value)
+    const editCar = (ec) => {
+        setCarId({...ec});
+        setCar({...ec})
     }
-    let onInputChangeYear = (event) => {
-        setYear(event.target.value)
+    function editC(e) {
+        // e.preventDefault()
+        putCar(carId, car);
+        // console.log(carId,car);
     }
     return (
         <div>
-            <form onSubmit={onSubmitForm}>
-                <input type="text" model={'model'} value={model} onInput={onInputChangeModel}/>
-                <input type="number" price={'price'} value={price} onInput={onInputChangePrice}/>
-                <input type="number" year={'year'} value={year} onInput={onInputChangeYear}/>
-                <input type="submit" value={'save'}/>
+            <form>
+                <input type="text" name={'model'} value={car.model} onInput={onChangeFunk}/>
+                <input type="number" name={'price'} value={car.price} onInput={onChangeFunk}/>
+                <input type="number" name={'year'} value={car.year} onInput={onChangeFunk}/>
+                <input type="submit" value={'save'} onClick={saveC}/>
+                <input type="submit" value={'changed'} onClick={editC}/>
             </form>
-            <div>{JSON.stringify(car)}</div>
-            <div> {getCars}</div>
 
+            <Cars
+                editCar={editCar}
+            />
         </div>
     );
 }
