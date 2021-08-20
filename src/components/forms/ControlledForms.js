@@ -5,7 +5,7 @@ import Cars from "../cars/Cars";
 export default function ControlledForms() {
 
     let [car, setCar] = useState({model: '', price: '', year: ''})
-    let [carId, setCarId] = useState({})
+    let [choseCar, setChoseCar] = useState({})
 
     function onChangeFunk(e) {
         setCar({...car, [e.target.name]: e.target.value});
@@ -14,13 +14,13 @@ export default function ControlledForms() {
         saveCar(car);
     }
     const editCar = (ec) => {
-        setCarId({...ec});
+        setChoseCar({...ec});
         setCar({...ec})
     }
     function editC(e) {
         // e.preventDefault()
-        putCar(carId, car);
-        // console.log(carId,car);
+        putCar(choseCar, car);
+        // console.log(choseCar,car);
     }
     return (
         <div>

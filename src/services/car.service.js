@@ -23,8 +23,8 @@ const delCar = (id) => {
     })
 }
 
-const putCar = (carId,car) => {
-    return fetch(url + '/' + carId.id, {
+const putCar = (choseCar,car) => {
+    return fetch(url + '/' + choseCar.id, {
         method: 'PUT',
         body: JSON.stringify(car),
         headers: {
