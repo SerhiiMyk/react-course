@@ -5,8 +5,6 @@ import {delCar, getCars} from "../../services/car.service";
 export default function Cars({editCar}) {
     let [cars, setCars] = useState([]);
 
-
-
     useEffect(() => {
         getCars().then(value => setCars([...value]));
     }, []);
@@ -15,8 +13,6 @@ export default function Cars({editCar}) {
         delCar(dc);
        setCars( cars.filter(value => value.id !== dc))
     }
-
-
 
     return (
         <div>

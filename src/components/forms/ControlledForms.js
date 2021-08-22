@@ -14,6 +14,7 @@ export default function ControlledForms() {
         saveCar(car);
     }
     const editCar = (ec) => {
+
         setChoseCar({...ec});
         setCar({...ec})
     }
