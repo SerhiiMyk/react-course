@@ -11,19 +11,16 @@ const saveCar = (x) => {
         .then((response) => response.json())
         .then((json) => console.log(json));
 }
-
 const getCars = () => {
     return fetch(url)
         .then((response) => response.json())
 }
-
 const delCar = (id) => {
     return fetch(url + '/' + id, {
         method: 'DELETE'
     })
 }
-
-const putCar = (choseCar,car) => {
+const putCar = (choseCar, car) => {
     return fetch(url + '/' + choseCar.id, {
         method: 'PUT',
         body: JSON.stringify(car),

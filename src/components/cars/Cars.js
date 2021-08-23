@@ -13,7 +13,6 @@ export default function Cars({editCar}) {
         delCar(dc);
        setCars( cars.filter(value => value.id !== dc))
     }
-
     return (
         <div>
             {
@@ -25,7 +24,6 @@ export default function Cars({editCar}) {
                         deleteCar={deleteCar}
                     />)
             }
-
         </div>
     );
 }

@@ -1,0 +1,13 @@
+.carWrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.car{
+    width: 400px;
+    margin-top: 10px;
+}
+.carButton button{
+    margin-left: 10px;
+    margin-top: 10px;
+}

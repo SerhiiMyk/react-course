@@ -1,7 +1,7 @@
+import './Forms.css'
 import {useState} from "react";
 import {putCar, saveCar} from "../../services/car.service";
 import Cars from "../cars/Cars";
-
 
 export default function ControlledForms() {
 
@@ -11,31 +11,38 @@ export default function ControlledForms() {
     function onChangeFunk(e) {
         setCar({...car, [e.target.name]: e.target.value});
     }
+
     function saveC(e) {
         saveCar(car);
     }
-    const editCar = (ec) => {
 
+    const editCar = (ec) => {
         setChoseCar({...ec});
         setCar({...ec})
     }
+
     function editC(e) {
-        // e.preventDefault()
         putCar(choseCar, car);
-        // console.log(choseCar,car);
+
     }
+
     return (
         <div>
-            <form>
-                <div>
-                    <h3>model</h3>
-                    <input type="text" name={'model'} value={car.model} onInput={onChangeFunk}/>
+            <form className={'wrap'}>
+                <div className={'fieldNames'}>
+                    <h4>model:</h4>
+                    <h4>year:</h4>
+                    <h4>price:</h4>
                 </div>
-
-                <input type="number" name={'price'} value={car.price} onInput={onChangeFunk}/>
-                <input type="number" name={'year'} value={car.year} onInput={onChangeFunk}/>
-                <input type="submit" value={'save'} onClick={saveC}/>
-                <input type="submit" value={'changed'} onClick={editC}/>
+                <div className={'forms'}>
+                    <input type="text" name={'model'} value={car.model} onInput={onChangeFunk}/>
+                    <input type="number" name={'year'} value={car.year} onInput={onChangeFunk}/>
+                    <input type="number" name={'price'} value={car.price} onInput={onChangeFunk}/>
+                </div>
+                <div className={'buttons'}>
+                    <input type="submit" value={'save'} onClick={saveC}/>
+                    <input type="submit" value={'change'} onClick={editC}/>
+                </div>
             </form>
 
             <Cars
