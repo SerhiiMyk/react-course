@@ -2,6 +2,7 @@ import {useState} from "react";
 import {putCar, saveCar} from "../../services/car.service";
 import Cars from "../cars/Cars";
 
+
 export default function ControlledForms() {
 
     let [car, setCar] = useState({model: '', price: '', year: ''})
@@ -26,7 +27,11 @@ export default function ControlledForms() {
     return (
         <div>
             <form>
-                <input type="text" name={'model'} value={car.model} onInput={onChangeFunk}/>
+                <div>
+                    <h3>model</h3>
+                    <input type="text" name={'model'} value={car.model} onInput={onChangeFunk}/>
+                </div>
+
                 <input type="number" name={'price'} value={car.price} onInput={onChangeFunk}/>
                 <input type="number" name={'year'} value={car.year} onInput={onChangeFunk}/>
                 <input type="submit" value={'save'} onClick={saveC}/>
