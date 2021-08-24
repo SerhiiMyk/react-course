@@ -1,13 +1,13 @@
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
-import Cars from "./cars/Cars";
-import CreateCar from "./create-car/CreateCar";
+import Cars from "./components/cars/Cars";
+import CreateCar from "./components/create-car/CreateCar";
+import './App.css'
 
 function App() {
   return (
       <Router>
-        <div>
+        <div className={'linkWrap'}>
           <Link to = {'/cars'}>show cars</Link>
-            <br/>
           <Link to = {'/create-car'}>create-car</Link>
         </div>
         <Route path={'/cars'} component={Cars}/>

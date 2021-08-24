@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
-import {getCars} from "../services/fetch.service";
-import Car from "./car/Car";
+import {getCars} from "../../services/fetch.service";
+import Car from "../car/Car";
+import './Cars.css'
 
 export default function Cars() {
     let [cars, serCars] = useState([])
@@ -10,8 +11,8 @@ export default function Cars() {
     }, [])
 
     return (
-        <div>
-
+        <div className={'CarsWrap'}>
+            <h2>Cars:</h2>
             {
                 cars.map(value => <Car
                     car={value}

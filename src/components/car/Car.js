@@ -1,3 +1,4 @@
+import './Car.css'
 export default function Car({car}) {
   return (
     <div>
