@@ -6,7 +6,7 @@ import UserDetails from "../user.details/UserDetails";
 
 export default function Users(props) {
 
-    let {match: {url}, history} = props;
+    let {match: {url}} = props;
     let [users, setUsers] = useState([])
 
     useEffect(() => {

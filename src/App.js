@@ -1,14 +1,16 @@
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 import Users from "./components/users/Users";
+import Posts from "./components/posts/Posts";
 
 function App() {
   return (
       <Router>
         <div>
           <Link to ={'/users'}>users page</Link>
+          <Link to ={'/posts'}>users page</Link>
         </div>
         <Route path={'/users'} component={Users}/>
-
+        <Route path={'/posts'} component={Posts}/>
       </Router>
   );
 }

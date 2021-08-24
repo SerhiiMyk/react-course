@@ -18,7 +18,7 @@ export default function UserDetails({history, match: {params: {id}}}) {
             <h2>id - {user.id}</h2>
             <h4>username - {user.username}</h4>
             <h4>email - {user.email}</h4>
-            <hr/>
+            {/*<hr/>*/}
             {/*<Address address={address}/>*/}
 
         </div>

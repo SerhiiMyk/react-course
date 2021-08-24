@@ -12,7 +12,6 @@ export default function User({user}) {
     return (
         <div>
             {user.name} - <button onClick={showDetails}>show user details</button>
-
         </div>
     );
 }
