@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {getPosts} from "../../services/fetch.service";
 import Post from "../post/Post";
+import './Posts.css'
 
 export default function Posts() {
 
@@ -11,7 +12,9 @@ export default function Posts() {
     }, [])
 
     return (
-        <div>
+        <div className={'postsWrap'}>
+            <h2>Posts page</h2>
+            <h3>Post titles:</h3>
             {
                 posts.map(value => <Post
                 key={value.id}

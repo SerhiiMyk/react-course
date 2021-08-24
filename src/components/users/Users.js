@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {getUsers} from "../../services/fetch.service";
 import User from "../user/User";
+import './Users.css'
 
 export default function Users() {
 
@@ -11,7 +12,9 @@ export default function Users() {
     }, [])
 
     return (
-        <div>
+        <div className={'usersWrap'}>
+            <h2>Users page</h2>
+            <h3>User names:</h3>
             {
                 users.map(value => <User
                 key={value.id}

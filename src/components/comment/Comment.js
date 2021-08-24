@@ -1,8 +1,8 @@
+import './Comment.css'
 export default function Comment({comment}) {
   return (
-    <div>
-      {comment.name}
-
+    <div className={'postWrap'}>
+      {comment.id}. {comment.name}
     </div>
   );
 }

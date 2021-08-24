@@ -1,8 +1,11 @@
-export default function User({user}) {
-  return (
-    <div>
-        {user.name}
+import './User.css'
 
-    </div>
-  );
+export default function User({user}) {
+    return (
+        <div className={'userWrap'}>
+            <div>
+                {user.id}. {user.name}
+            </div>
+        </div>
+    );
 }

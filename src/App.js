@@ -6,7 +6,7 @@ import {
     Link,
     withRouter
 } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./components/home-page/Home";
 import Users from "./components/users/Users";
 import Posts from "./components/posts/Posts";
 import Comments from "./components/comments/Comments";

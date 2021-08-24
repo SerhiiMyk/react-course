@@ -1,7 +1,8 @@
+import './Post.css'
 export default function Post({post}) {
   return (
-    <div>
-        {post.title}
+    <div className={'postWrap'}>
+      <div>{post.id}. {post.title}</div>
     </div>
   );
 }
