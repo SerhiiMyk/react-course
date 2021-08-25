@@ -1,0 +1,14 @@
+.usersWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.users{
+    width: 50%;
+}
+.detailsWrap{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

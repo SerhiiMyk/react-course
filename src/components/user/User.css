@@ -1,0 +1,12 @@
+.user{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+.user p{
+    width: 40%;
+
+}
+.user button{
+    width: 30%;
+}

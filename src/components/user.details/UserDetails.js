@@ -14,7 +14,7 @@ export default function UserDetails({history, match: {params: {id}}}) {
         getUser(id).then(value => setUser({...value}))
     }, [id])
     return (
-        <div>
+        <div className={'userDetails'}>
             <h2>id - {user.id}</h2>
             <h4>username - {user.username}</h4>
             <h4>email - {user.email}</h4>

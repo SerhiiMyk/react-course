@@ -1,18 +1,19 @@
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
 import Users from "./components/users/Users";
 import Posts from "./components/posts/Posts";
+import './App.css'
 
 function App() {
-  return (
-      <Router>
-        <div>
-          <Link to ={'/users'}>users page</Link>
-          <Link to ={'/posts'}>users page</Link>
-        </div>
-        <Route path={'/users'} component={Users}/>
-        <Route path={'/posts'} component={Posts}/>
-      </Router>
-  );
+    return (
+        <Router>
+            <div className={'headerWrap'}>
+                <h3><Link to={'/users'}>users page</Link></h3>
+                <h3><Link to={'/posts'}>posts page</Link></h3>
+            </div>
+            <Route path={'/users'} component={Users}/>
+            <Route path={'/posts'} component={Posts}/>
+        </Router>
+    );
 }
 
 export default App;

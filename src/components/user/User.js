@@ -1,4 +1,5 @@
 import {useHistory} from "react-router";
+import './User.css'
 
 export default function User({user}) {
 
@@ -10,8 +11,9 @@ export default function User({user}) {
     }
 
     return (
-        <div>
-            {user.name} - <button onClick={showDetails}>show user details</button>
+        <div className={'user'}>
+            <p>{user.name}</p>
+            <button onClick={showDetails}>show user details</button>
         </div>
     );
 }

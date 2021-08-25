@@ -1,0 +1,12 @@
+.postsWrap{
+    display: flex;
+    justify-content: center;
+}
+.posts{
+    margin-top: 10px;
+    text-align: center;
+    width: 40%;
+}
+.posts h2{
+    margin-bottom: 20px;
+}

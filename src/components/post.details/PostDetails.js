@@ -1,10 +1,11 @@
+import './PostDetails.css'
 export default function PostDetails({location: {state}}) {
 
     return (
-        <div>
-            <h4>userId - {state.userId}</h4>
-            <h4>title - {state.title}</h4>
-            <h4>body - {state.body}</h4>
+        <div className={'postDetails'}>
+            <p><strong>userId</strong> - {state.userId}</p>
+            <p><strong>title</strong> - {state.title}</p>
+            <p><strong>body</strong> - {state.body}</p>
         </div>
     );
 }
