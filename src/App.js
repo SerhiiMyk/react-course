@@ -1,11 +1,22 @@
-import './App.css';
+import {useReducer} from "react";
+import reducer from "./reducers/reducer";
 
-function App() {
+
+export default function App() {
+
+  let [state, dispatch] = useReducer(reducer, 0); // state = {a:0,b:0}
+
   return (
-    <div>
-
-    </div>
+      <div>
+        <h1>{state}</h1>
+        <button onClick={() => dispatch('+')}>inc</button>
+        <button onClick={() => dispatch('-')}>dec</button>
+      </div>
   );
 }
-
-export default App;
+// є об'єкт, значення якого 0
+// Стоврити 2 кнопки.
+//     Перша збільшує   значення на 10
+// Друга зменшує на 2.
+//
+// Зміну стану та виведення реалізувати через reducer
