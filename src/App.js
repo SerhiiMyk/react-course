@@ -7,11 +7,14 @@ export default function App() {
   let [state, dispatch] = useReducer(reducer, 0); // state = {a:0,b:0}
 
   return (
-      <div className={'wrap'}>
-          <div className={'counter'}>
-              <h1>{state}</h1>
-              <button onClick={() => dispatch('+')}>+10</button>
-              <button onClick={() => dispatch('-')}>-2</button>
+      <div>
+          <h1>Counter</h1>
+          <div className={'wrap'}>
+              <div className={'counter'}>
+                  <h2>{state}</h2>
+                  <button onClick={() => dispatch('+')}>+10</button>
+                  <button onClick={() => dispatch('-')}>-2</button>
+              </div>
           </div>
       </div>
   );
