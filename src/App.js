@@ -12,8 +12,8 @@ export default function App() {
           <div className={'wrap'}>
               <div className={'counter'}>
                   <h2>{state}</h2>
-                  <button onClick={() => dispatch('+')}>+10</button>
                   <button onClick={() => dispatch('-')}>-2</button>
+                  <button onClick={() => dispatch('+')}>+10</button>
               </div>
           </div>
       </div>
