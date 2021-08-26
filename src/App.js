@@ -14,18 +14,18 @@ function App() {
             <div className={'wrap'}>
                 <div className={'counter'}>
                     <h1>{a}</h1>
-                    <button onClick={() => dispatch({key: 'a', type: 'INC'})}>+</button>
                     <button onClick={() => dispatch({key: 'a', type: 'DEC'})}>-</button>
+                    <button onClick={() => dispatch({key: 'a', type: 'INC'})}>+</button>
                 </div>
                 <div className={'counter'}>
                     <h1>{b}</h1>
-                    <button onClick={() => dispatch({key: 'b', type: 'INC'})}>+</button>
                     <button onClick={() => dispatch({key: 'b', type: 'DEC'})}>-</button>
+                    <button onClick={() => dispatch({key: 'b', type: 'INC'})}>+</button>
                 </div>
                 <div className={'counter'}>
                     <h1>{c}</h1>
-                    <button onClick={() => dispatch({key: 'c', type: 'INC'})}>+</button>
                     <button onClick={() => dispatch({key: 'c', type: 'DEC'})}>-</button>
+                    <button onClick={() => dispatch({key: 'c', type: 'INC'})}>+</button>
                 </div>
             </div>
         </div>
