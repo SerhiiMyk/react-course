@@ -5,7 +5,6 @@ export default function User({user}) {
 
     let history = useHistory()
 
-
     let showDetails = () => {
         history.push('/users/' + user.id, user)
     }

@@ -1,14 +1,12 @@
 .usersWrap {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .users{
     width: 50%;
 }
-.detailsWrap{
+.detailsWrap {
     width: 50%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    padding-left: 80px;
 }

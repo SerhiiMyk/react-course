@@ -14,7 +14,6 @@ export default function Users(props) {
         getUsers().then(value => setUsers([...value]))
     }, [])
 
-
     return (
         <div className={'usersWrap'}>
             <div className={'users'}>
