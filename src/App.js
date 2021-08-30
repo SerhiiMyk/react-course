@@ -22,16 +22,16 @@ function App() {
         addUser(user).then(value => dispatch(pushUser(value)))
     }
     return (
-        <div>
-            <form onSubmit={onSubmit}>
+        <div className={'wrap'}>
+            <form onSubmit={onSubmit} className={'form'}>
                 <input type="text" name={'name'}/>
                 <button>add user</button>
             </form>
-            <hr/>
+            {/*<hr/>*/}
 
-            {
-                users.map(value => <div key={value.id}> {value.name}</div>)
-            }
+            <div className={'users'}>{
+                users.map(value => <div key={value.id}><h3>{value.id}. {value.name}</h3></div>)
+            }</div>
 
         </div>
     );
