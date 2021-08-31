@@ -1,0 +1,4 @@
+const LOAD_USERS ="LOAD_USERS"
+const ADD_USERS ="ADD_USERS"
+
+export {LOAD_USERS,ADD_USERS}
