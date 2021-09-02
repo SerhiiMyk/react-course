@@ -21,10 +21,11 @@ function App() {
 
     }, [])
 
+    let imgUrl ='https://www.themoviedb.org/t/p/w220_and_h330_face'
 
     return (
         <div>
-            {/*{movies.map(value => <img src={value.poster_path} alt=""/>)}*/}
+            {movies.map(value => <img src={imgUrl+value.poster_path} alt=""/>)}
             {/*{genres.map(value => <div key={value.id}>{value}</div>)}*/}
         </div>
 
