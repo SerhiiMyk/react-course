@@ -1,22 +1,31 @@
 import './App.css';
 import {useEffect, useState} from "react";
 import {getGenre, getMovie} from "./services/api.service";
+import {useDispatch, useSelector} from "react-redux";
 
 function App() {
 
-    let [movies, setMovies] = useState([])
-    let [genre, setGenre] = useState([])
+    let state = useSelector(state => {
+        let {moviesReducer} = state;
+        return moviesReducer
+    })
+
+    let dispatch = useDispatch()
+    let {movies} = state
+    console.log(movies)
+
 
     useEffect(() => {
-        getMovie().then(value =>setMovies([...value.data.results]))
-        getGenre().then(value =>setGenre([...value.data.genres]))
+        dispatch(getMovie())
+        // dispatch(getGenre())
+
     }, [])
+
 
     return (
         <div>
-            {movies.map(value => <div key={value.id}>{value.title}</div>)}
-            {genre.map(value => <div key={value.id}>{value.name}</div>)}
-
+            {/*{movies.map(value => <img src={value.poster_path} alt=""/>)}*/}
+            {/*{genres.map(value => <div key={value.id}>{value}</div>)}*/}
         </div>
 
     );

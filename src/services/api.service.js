@@ -1,4 +1,5 @@
 import axios from "axios";
+import {loadGenres, loadMovies} from "../redux/action";
 
 const instance = axios.create({
     baseURL: 'https://api.themoviedb.org/3/',
@@ -7,10 +8,13 @@ const instance = axios.create({
     }
 });
 
-let getMovie = async () =>await instance.get('/discover/movie');
-let getGenre = async () =>await instance.get('/genre/movie/list');
+const getMovie = () => async (dispatch) =>{
+    let response = await instance.get('/discover/movie');
+    dispatch(loadMovies(response.data.results))}
 
 
-
+const getGenre = () => async (dispatch) =>{
+    let response = await instance.get('/genre/movie/list');
+    dispatch(loadGenres(response.data.genres))}
 
 export {getMovie, getGenre}
