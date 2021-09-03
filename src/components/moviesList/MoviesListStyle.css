@@ -1,0 +1,9 @@
+.moviesListWrap{
+    display: flex;
+    justify-content: center;
+}
+.moviesList{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1300px;
+}
