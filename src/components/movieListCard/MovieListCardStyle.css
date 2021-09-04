@@ -1,21 +1,32 @@
 .movieCard{
-    width: 220px;
-    margin: 20px;
+    width: 300px;
+    margin: 10px;
     background: powderblue;
     box-shadow: 5px 10px 20px black;
     overflow: hidden;
 
 }
-.title{
+.title {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
+
 .movieCard:hover{
     background: black;
     color: white;
     transition: 300ms;
+}
+.cardInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
 }
 .tag{
     background: black;
@@ -27,11 +38,12 @@
     margin-left: 5px;
 }
 .tag.green {
-    color: green;
+    background: green;
 }
 .tag.orange {
-    color: orange;
+    background: orange;
 }
 .tag.red {
-    color: red;
+    background: red;
 }
+

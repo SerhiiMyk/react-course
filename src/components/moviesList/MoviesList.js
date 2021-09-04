@@ -18,7 +18,7 @@ function MoviesList() {
 
     useEffect(() => {
         dispatch(getMovie())
-    }, [])
+    }, [dispatch])
 
 
 
@@ -29,7 +29,10 @@ function MoviesList() {
                 key={value.id}
                 poster_path={value.poster_path}
                 title={value.title}
-                vote_average={value.vote_average}/>)}</div>
+                vote_average={value.vote_average}
+                release_date={value.release_date}
+                />)}
+            </div>
         </div>
 
     );
