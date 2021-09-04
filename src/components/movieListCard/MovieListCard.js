@@ -1,8 +1,13 @@
 import './MovieListCardStyle.css'
+import {Stars} from "@material-ui/icons";
+
+function StarsRating() {
+    return null;
+}
 
 export default function MovieListCard({poster_path, title, vote_average, release_date}) {
     const imgUrlW300 = 'https://www.themoviedb.org/t/p/w300'
-    const unavailableImg = 'https://t3.ftcdn.net/jpg/01/32/17/30/360_F_132173009_6W4ubzuxW8g4NY8yN9KSKCsgXM587Pl3.jpg'
+    const unavailableImg = 'https://media.comicbook.com/files/img/default-movie.png'
 
     function onClick() {
         console.log('yra');
@@ -28,6 +33,7 @@ export default function MovieListCard({poster_path, title, vote_average, release
                 <p>{release_date}</p>
                 <span className={`tag ${voteColor(vote_average)}`}>{vote_average}</span>
             </div>
+
         </div>
     );
 }

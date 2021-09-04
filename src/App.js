@@ -12,9 +12,9 @@ function App() {
             <BrowserRouter>
                 <Header/>
                 <div className='mainWrap'>
-                    <Route path='/mainPage' component={MoviesList} exact/>
-                    <Route path='/movieInfo' component={MovieInfo}/>
-                    <PagePagination/>
+                    <MoviesList/>
+                    {/*<Route path='/mainPage' component={MoviesList} exact/>*/}
+                    {/*<Route path='/movieInfo' component={MovieInfo}/>*/}
                 </div>
             </BrowserRouter>
         </>

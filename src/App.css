@@ -1,6 +1,6 @@
-
-.mainWrap {
-    background: powderblue;
-    padding-top: 150px;
+@media(max-width: 1980px) {
+    .mainWrap {
+        background: powderblue;
+        padding: 150px 0px 50px 0;
+    }
 }
-
