@@ -1,8 +1,13 @@
-export default function MovieInfo() {
-  return (
-    <div>
-    MovieInfo
+export default function MovieInfo({location:{state:{vote_average,overview,backdrop_path,genre_ids,title}}}) {
 
-    </div>
-  );
+
+
+    return (
+        <div>
+            {title}
+            <br/>
+            {overview}
+
+        </div>
+    );
 }

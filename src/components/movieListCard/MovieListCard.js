@@ -1,13 +1,12 @@
 import './MovieListCardStyle.css'
 import ReactStars from "react-rating-stars-component";
+import {Link} from "react-router-dom";
 
-export default function MovieListCard({poster_path, title, vote_average}) {
+export default function MovieListCard({movie}) {
     const imgUrlW300 = 'https://www.themoviedb.org/t/p/w300'
     const unavailableImg = 'https://media.comicbook.com/files/img/default-movie.png'
 
-    function onClick() {
-        console.log('yra');
-    }
+    let {poster_path, title, vote_average, id} = movie
 
     const voteColor = (vote) => {
         if (vote >= 8) {
@@ -19,10 +18,10 @@ export default function MovieListCard({poster_path, title, vote_average}) {
         }
     };
 
-
     return (
         <div className='movieCard'>
-            <img src={poster_path ? `${imgUrlW300}${poster_path}` : unavailableImg} alt={title} onClick={onClick}/>
+            <Link to={{pathname: '/movieInfo/' + id,state:movie}}><img
+                src={poster_path ? `${imgUrlW300}${poster_path}` : unavailableImg} alt={title}/></Link>
             <div className='title'>
                 <p>{title}</p>
             </div>

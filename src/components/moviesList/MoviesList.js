@@ -12,20 +12,17 @@ const {getMovie} = require("../../services/api.service");
 function MoviesList() {
 
     let state = useSelector(state => {
-        let moviesReducer = state.moviesReducer.data;
-        return moviesReducer
+        return state.moviesReducer.data
     })
-    console.log(state);
-
+    
     let dispatch = useDispatch();
     let movies = state.results;
     let totalPages = state.total_pages;
 
     let [page, setPage] = useState(1)
     let [genreId, setGenreId] = useState(28)
-
     let [pages, setPages] = useState(1)
-    console.log(pages);
+
 
     useEffect(() => {
         dispatch(getMovie(page, genreId));
@@ -50,9 +47,11 @@ function MoviesList() {
                 <div className='moviesList'>
                     {movies && movies.map(value => <MovieListCard
                         key={value.id}
-                        poster_path={value.poster_path}
-                        title={value.title}
-                        vote_average={value.vote_average}
+                        movie={value}
+                        // poster_path={value.poster_path}
+                        // title={value.title}
+                        // vote_average={value.vote_average}
+                        // id={value.id}
                     />)}
                 </div>
             </div>

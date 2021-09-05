@@ -1,20 +1,22 @@
 import './App.css';
 import MoviesList from "./components/moviesList/MoviesList";
 import Header from "./components/header/Header";
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import MovieInfo from "./components/movieInfo/MovieInfo";
 
 function App() {
 
     return (
         <>
-            <BrowserRouter>
+            <Router>
                 <Header/>
                 <div className='mainWrap'>
-                    <MoviesList/>
-                    {/*<Route path='/mainPage' component={MoviesList} exact/>*/}
-                    {/*<Route path='/movieInfo' component={MovieInfo}/>*/}
+                    <Switch>
+                        <Route path='/movieInfo/:id' component={MovieInfo}/>
+                        <Route path='/' exact component={MoviesList}/>
+                    </Switch>
                 </div>
-            </BrowserRouter>
+            </Router>
         </>
 
     );

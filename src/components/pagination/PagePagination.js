@@ -6,7 +6,6 @@ export default function PaginationItem({chosePage,pages}) {
         let page = e.target.textContent
         chosePage(page);
     }
-    console.log(pages);
     return (
         <div className='pagination'>
             <Pagination
