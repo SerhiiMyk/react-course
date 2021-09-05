@@ -1,9 +1,5 @@
 import './MovieListCardStyle.css'
-import {Stars} from "@material-ui/icons";
-
-function StarsRating() {
-    return null;
-}
+import ReactStars from "react-rating-stars-component";
 
 export default function MovieListCard({poster_path, title, vote_average, release_date}) {
     const imgUrlW300 = 'https://www.themoviedb.org/t/p/w300'
@@ -15,22 +11,30 @@ export default function MovieListCard({poster_path, title, vote_average, release
 
     const voteColor = (vote) => {
         if (vote >= 8) {
-            return "green";
-        } else if (vote >= 6) {
             return "orange";
+        } else if (vote >= 6) {
+            return "cornflowerblue";
         } else {
-            return "red"
+            return "grey"
         }
     };
 
+
     return (
         <div className='movieCard'>
-            <img src={poster_path?`${imgUrlW300}${poster_path}`: unavailableImg} alt={title} onClick={onClick}/>
+            <img src={poster_path ? `${imgUrlW300}${poster_path}` : unavailableImg} alt={title} onClick={onClick}/>
             <div className='title'>
                 <p>{title}</p>
             </div>
             <div className='cardInfo'>
-                <p>{release_date}</p>
+                <ReactStars
+                    value={vote_average}
+                    count={10}
+                    size={24}
+                    isHalf={true}
+                    activeColor="red"
+                    edit={false}
+                />
                 <span className={`tag ${voteColor(vote_average)}`}>{vote_average}</span>
             </div>
 

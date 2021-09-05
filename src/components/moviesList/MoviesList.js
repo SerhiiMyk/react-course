@@ -2,8 +2,6 @@ import MovieListCard from "../movieListCard/MovieListCard";
 import './MoviesListStyle.css'
 import PagePagination from "../pagination/PagePagination";
 import {useState} from "react";
-import StarsRating from "../starsRating/StarsRating";
-
 const {useSelector, useDispatch} = require("react-redux");
 const {useEffect} = require("react");
 const {getMovie} = require("../../services/api.service");
@@ -28,7 +26,7 @@ function MoviesList() {
     const chosePage = (page) => {
         return setPage(page)
     }
-    let rating
+
     return (
         <div>
             <div className='moviesListWrap'>
@@ -46,7 +44,7 @@ function MoviesList() {
                 <PagePagination
                     chosePage={chosePage}/>
             </div>
-            <StarsRating/>
+
         </div>
 
     );
