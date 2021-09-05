@@ -1,7 +1,7 @@
 import './MovieListCardStyle.css'
 import ReactStars from "react-rating-stars-component";
 
-export default function MovieListCard({poster_path, title, vote_average, release_date}) {
+export default function MovieListCard({poster_path, title, vote_average}) {
     const imgUrlW300 = 'https://www.themoviedb.org/t/p/w300'
     const unavailableImg = 'https://media.comicbook.com/files/img/default-movie.png'
 
@@ -26,6 +26,7 @@ export default function MovieListCard({poster_path, title, vote_average, release
             <div className='title'>
                 <p>{title}</p>
             </div>
+            <hr/>
             <div className='cardInfo'>
                 <ReactStars
                     value={vote_average}

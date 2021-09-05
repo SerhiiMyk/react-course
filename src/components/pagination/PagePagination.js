@@ -1,16 +1,16 @@
 import {Pagination} from "@material-ui/lab";
 import './PaginationItemStyle.css'
 
-export default function PaginationItem({chosePage}) {
+export default function PaginationItem({chosePage,pages}) {
     const changePage = (e) => {
         let page = e.target.textContent
         chosePage(page);
     }
-    let numOfPage = 500
+    console.log(pages);
     return (
         <div className='pagination'>
             <Pagination
-                count={numOfPage}
+                count={pages}
                 shape='rounded'
                 onChange={changePage}
             />

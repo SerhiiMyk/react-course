@@ -1,9 +1,7 @@
 import './App.css';
 import MoviesList from "./components/moviesList/MoviesList";
 import Header from "./components/header/Header";
-import PagePagination from "./components/pagination/PagePagination";
-import {BrowserRouter, Route} from "react-router-dom";
-import MovieInfo from "./components/movieInfo/MovieInfo";
+import {BrowserRouter} from "react-router-dom";
 
 function App() {
 
