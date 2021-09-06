@@ -4,6 +4,7 @@
     background: powderblue;
     box-shadow: 5px 10px 20px black;
     overflow: hidden;
+    transition: 300ms;
 }
 .movieCard img{
     height: 450px;
@@ -21,9 +22,10 @@
 }
 
 .movieCard:hover{
-    background: black;
-    color: white;
-    transition: 300ms;
+    box-shadow: 1px 10px 20px orangered;
+    /*background: black;*/
+    /*color: white;*/
+    transition: 300ms ease-in-out;
 }
 .cardInfo{
     display: flex;

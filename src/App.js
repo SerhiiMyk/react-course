@@ -12,8 +12,8 @@ function App() {
                 <Header/>
                 <div className='mainWrap'>
                     <Switch>
+                        <Route path='/' exact><MoviesList/></Route>
                         <Route path='/movieInfo/:id' component={MovieInfo}/>
-                        <Route path='/' exact component={MoviesList}/>
                     </Switch>
                 </div>
             </Router>
