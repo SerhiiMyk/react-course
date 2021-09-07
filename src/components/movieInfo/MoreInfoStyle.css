@@ -1,25 +1,50 @@
-.movieInfoWrap *{
+.movieInfoWrapLight * {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     box-sizing: border-box;
-
 }
-.movieInfoWrap{
+
+.movieInfoWrapDark * {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+.movieInfoWrapLight {
     height: 1000px;
     background: powderblue;
 }
 
-.movieInfoWrap img {
+.movieInfoWrapDark {
+    height: 1000px;
+    background: #2A2650;
+}
+
+.movieInfoWrapLight img {
     width: 550px;
     border-radius: 30px;
     margin-right: 50px;
     box-shadow: 2px 2px 15px black;
 }
 
-.movieInfoTitle {
+.movieInfoWrapDark img {
+    width: 550px;
+    border-radius: 30px;
+    margin-right: 50px;
+    box-shadow: 1px 2px 20px grey;
+}
+
+.movieInfoTitleLight {
     text-align: center;
     font-size: 40px;
     text-decoration: underline;
+}
+
+.movieInfoTitleDark {
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+    color: #E8E8E8;
 }
 
 .infoBox {
@@ -27,39 +52,93 @@
     justify-content: center;
     margin-top: 50px;
 }
-.rating{
+
+.ratingLight {
     display: flex;
     align-items: center;
 }
-.rating p{
+
+.ratingDark {
+    display: flex;
+    align-items: center;
+}
+
+.ratingLight p {
     width: 10px;
     margin: 4px 0 0 15px;
     font-weight: 900;
 }
-.infoDetails{
+
+.ratingDark p {
+    width: 10px;
+    margin: 4px 0 0 15px;
+    font-weight: 900;
+    color: #E8E8E8;
+}
+
+.infoDetailsLight {
     width: 500px;
     height: 309px;
-    background: rgba(250,250,210, 0.4);
+    background: rgba(250, 250, 210, 0.5);
     border-radius: 30px;
     padding: 10px 20px 20px 20px;
     box-shadow: 2px 2px 15px black;
 }
-.infoDetails>span{
+
+.infoDetailsDark {
+    width: 500px;
+    height: 309px;
+    background: rgba(95, 84, 188, 0.5);
+    border-radius: 30px;
+    padding: 10px 20px 20px 20px;
+    box-shadow: 1px 2px 20px grey;
+}
+
+.infoDetailsLight > span {
     font-size: 20px;
     font-weight: 900;
 }
-.infoDetails>p{
+
+.infoDetailsDark > span {
+    font-size: 20px;
+    font-weight: 900;
+    color: #E8E8E8;
+}
+
+.infoDetailsLight > p {
     font-size: 17px;
     font-weight: 400;
     text-align: justify;
     margin: 5px 0;
 }
 
-.thisMovieGenres p{
+.infoDetailsDark > p {
+    font-size: 17px;
+    font-weight: 400;
+    text-align: justify;
+    margin: 5px 0;
+    color: #E8E8E8;
+}
+
+.thisMovieGenresLight p {
     font-size: 20px;
     font-weight: 900;
     margin-bottom: 5px;
 }
-.thisMovieGenres span{
+
+.thisMovieGenresDark p {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    color: #E8E8E8;
+}
+
+.thisMovieGenresLight span {
     margin-right: 7px;
 }
+
+.thisMovieGenresDark span {
+    margin-right: 7px;
+    color: #E8E8E8;
+}
+

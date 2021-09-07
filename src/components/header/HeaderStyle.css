@@ -3,22 +3,84 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-.header{
+.headerLight{
     height: 100px;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     position: fixed;
     background: powderblue;
     font-family: Stencil Std, fantasy;
-    box-shadow: 0px 2px 10px black;
+    box-shadow: 0 2px 10px black;
     z-index: 1;
-
 }
-
-.header h1{
+.headerDark{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    background: #2A2650;
+    font-family: Stencil Std, fantasy;
+    box-shadow: 0 5px 20px mediumslateblue;
+    z-index: 1;
+}
+.headerLight h1{
     padding: 5px;
     border: solid black 2px;
     border-radius: 10px;
+    margin-left: 50px;
+}
+.headerDark h1{
+    padding: 5px;
+    border: solid #E8E8E8 2px;
+    border-radius: 10px;
+    color: #E8E8E8;
+    box-shadow: 1px 2px 15px mediumslateblue;
+    margin-left: 50px;
+}
+.headerLight button{
+    color: black;
+    border: solid black 1px;
+    border-radius: 25px;
+    margin: 10px 5px 5px 5px ;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: transparent;
+    width: 100px;
+    height: 40px;
+    transition:200ms;
+    margin-left: 600px;
+}
+.headerDark button{
+    color: #E8E8E8;
+    border: solid #E8E8E8 1px;
+    border-radius: 25px;
+    margin: 10px 5px 5px 5px ;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: transparent;
+    width: 100px;
+    height: 40px;
+    transition:200ms;
+    margin-left: 600px;
+
+}
+.headerLight button:hover{
+    font-weight: 900;
+    border: solid orangered 2px;
+    color: orangered;
+    background-color: transparent;
+    transition:200ms ease-in-out;
+    box-shadow: 0 1px 10px orangered ;
+}
+.headerDark button:hover{
+    font-weight: 900;
+    border: solid orangered 2px;
+    color: orangered;
+    background-color: transparent;
+    transition:200ms ease-in-out;
+    box-shadow: 0 1px 10px orangered ;
 }

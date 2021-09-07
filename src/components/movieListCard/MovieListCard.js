@@ -1,12 +1,16 @@
 import './MovieListCardStyle.css'
 import ReactStars from "react-rating-stars-component";
 import {Link} from "react-router-dom";
+import {useSelector} from "react-redux";
+import PosterPreview from "../posterPreview/PosterPreview";
 
 export default function MovieListCard({movie}) {
-    const imgUrlW300 = 'https://www.themoviedb.org/t/p/w300'
-    const unavailableImg = 'https://media.comicbook.com/files/img/default-movie.png'
 
-    let {poster_path, title, vote_average, id} = movie
+    let mode = useSelector(state1 => {
+        return state1.lightDarkModeReducer.mode.toggle
+    })
+
+    let {poster_path, title, vote_average, id} = movie;
 
     const voteColor = (vote) => {
         if (vote >= 8) {
@@ -14,15 +18,18 @@ export default function MovieListCard({movie}) {
         } else if (vote >= 6) {
             return "cornflowerblue";
         } else {
-            return "grey"
+            return "grey";
         }
     };
 
     return (
-        <div className='movieCard'>
-            <Link to={{pathname: '/movieInfo/' + id,state:movie}}><img
-                src={poster_path ? `${imgUrlW300}${poster_path}` : unavailableImg} alt={title}/></Link>
-            <div className='title'>
+        <div className={`movieCard${mode}`}>
+            <Link to={{pathname: '/movieInfo/' + id, state: movie}}>
+                <PosterPreview
+                    poster_path={poster_path}
+                    title={title}/>
+            </Link>
+            <div className={`title${mode}`}>
                 <p>{title}</p>
             </div>
             <hr/>
@@ -37,7 +44,6 @@ export default function MovieListCard({movie}) {
                 />
                 <span className={`tag ${voteColor(vote_average)}`}>{vote_average}</span>
             </div>
-
         </div>
     );
 }

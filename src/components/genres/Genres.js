@@ -10,6 +10,10 @@ export default function Genres({choseGenre}) {
         return genresReducer
     })
 
+    let mode = useSelector(state1 => {
+        return state1.lightDarkModeReducer.mode.toggle
+    })
+
     let {genres} = state;
     let dispatch = useDispatch();
 
@@ -17,16 +21,14 @@ export default function Genres({choseGenre}) {
         dispatch(getGenre());
     }, [dispatch]);
 
-
     return (
-        <div className={'genresBtnWrap'}>
+        <div className={`genresBtnWrap${mode}`}>
             {genres.map(value =>
                 <GenreBtn
                     key={value.id}
                     genre={value}
                     choseGenre={choseGenre}
                 />)}
-
         </div>
     );
 }

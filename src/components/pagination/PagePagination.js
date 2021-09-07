@@ -1,9 +1,9 @@
 import {Pagination} from "@material-ui/lab";
 import './PaginationItemStyle.css'
 
-export default function PaginationItem({chosePage,pages}) {
+export default function PaginationItem({chosePage, pages}) {
     const changePage = (e) => {
-        let page = e.target.textContent
+        let page = e.target.textContent;
         chosePage(page);
     }
     return (

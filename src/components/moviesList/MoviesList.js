@@ -3,6 +3,7 @@ import './MoviesListStyle.css'
 import PagePagination from "../pagination/PagePagination";
 import {useState} from "react";
 import Genres from "../genres/Genres";
+import {createTheme, MuiThemeProvider} from "@material-ui/core";
 
 const {useSelector, useDispatch} = require("react-redux")
 const {useEffect} = require("react");
@@ -11,22 +12,26 @@ const {getMovie} = require("../../services/api.service");
 
 function MoviesList() {
 
+    let dispatch = useDispatch();
+
     let state = useSelector(state => {
         return state.moviesReducer.data
-    })
-    
-    let dispatch = useDispatch();
+    });
+    let mode = useSelector(state1 => {
+        return state1.lightDarkModeReducer.mode.toggle
+    });
+
     let movies = state.results;
     let totalPages = state.total_pages;
 
-    let [page, setPage] = useState(1)
-    let [genreId, setGenreId] = useState(28)
-    let [pages, setPages] = useState(1)
+    let [page, setPage] = useState(1);
+    let [genreId, setGenreId] = useState(28);
+    let [pages, setPages] = useState(1);
 
 
     useEffect(() => {
         dispatch(getMovie(page, genreId));
-        setPages(totalPages)
+        setPages(totalPages);
     }, [dispatch, page, genreId, totalPages]);
 
     const chosePage = (page) => {
@@ -35,6 +40,11 @@ function MoviesList() {
     const choseGenre = (genreId) => {
         return setGenreId(genreId);
     }
+    const theme = createTheme({
+        palette: {
+            type: mode && mode.toLowerCase()
+        }
+    })
 
     return (
         <div className='mainPage'>
@@ -48,20 +58,17 @@ function MoviesList() {
                     {movies && movies.map(value => <MovieListCard
                         key={value.id}
                         movie={value}
-                        // poster_path={value.poster_path}
-                        // title={value.title}
-                        // vote_average={value.vote_average}
-                        // id={value.id}
                     />)}
                 </div>
             </div>
             <div>
-                {pages > 1 &&
-                (<PagePagination
-                    chosePage={chosePage}
-                    pages={pages}/>)}
+                <MuiThemeProvider theme={theme}>
+                    {pages > 1 &&
+                    (<PagePagination
+                        chosePage={chosePage}
+                        pages={pages}/>)}
+                </MuiThemeProvider>
             </div>
-
         </div>
 
     );

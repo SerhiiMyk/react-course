@@ -1,7 +1,7 @@
 import axios from "axios";
 import {loadGenres, loadMovies} from "../redux/action";
 
-
+const apiKey = '24d2953612c72c45a876d2a49471a079'
 const instance = axios.create({
 
     baseURL: 'https://api.themoviedb.org/3',
@@ -10,8 +10,8 @@ const instance = axios.create({
     }
 });
 
-const getMovie = (page,genreId) => async (dispatch,) => {
-    let response = await instance.get(`/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&page=${page}&with_genres=${genreId}`);
+const getMovie = (page, genreId) => async (dispatch) => {
+    let response = await instance.get(`/discover/movie?api_key=${apiKey}&page=${page}&with_genres=${genreId}`);
     dispatch(loadMovies(response.data))
 }
 

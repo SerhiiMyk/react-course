@@ -1,4 +1,4 @@
-.movieCard{
+.movieCardLight {
     width: 300px;
     margin: 10px;
     background: powderblue;
@@ -6,11 +6,22 @@
     overflow: hidden;
     transition: 300ms;
 }
-.movieCard img{
+
+.movieCardDark {
+    width: 300px;
+    margin: 10px;
+    background: #3B3386;
+    box-shadow: 5px 10px 20px grey;
+    overflow: hidden;
+    transition: 300ms;
+}
+
+.movieCard img {
     height: 450px;
     width: 300px;
 }
-.title {
+
+.titleLight {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,20 +32,38 @@
     font-weight: 900;
 }
 
-.movieCard:hover{
-    box-shadow: 1px 10px 20px orangered;
-    /*background: black;*/
-    /*color: white;*/
+.titleDark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: #E8E8E8;
+}
+
+.movieCardLight:hover {
+    background: #2A2650;
+    color: white;
     transition: 300ms ease-in-out;
 }
-.cardInfo{
+
+.movieCardDark:hover {
+    box-shadow: 1px 10px 20px orangered;
+    background: #5F54BC;
+    transition: 300ms ease-in-out;
+}
+
+.cardInfo {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 5px 0 10px 0
-;
+    padding: 5px 0 10px 0;
 }
-.tag{
+
+.tag {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     padding: 3px;
@@ -43,12 +72,15 @@
     text-align: center;
     background: grey;
 }
+
 .tag.orange {
     background: coral;
 }
+
 .tag.cornflowerblue {
     background: cornflowerblue;
 }
+
 .tag.grey {
     background: grey;
 }
