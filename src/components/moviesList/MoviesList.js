@@ -17,8 +17,11 @@ function MoviesList() {
     let state = useSelector(state => {
         return state.moviesReducer.data
     });
-    let mode = useSelector(state1 => {
-        return state1.lightDarkModeReducer.mode.toggle
+    let mode = useSelector(state => {
+        return state.lightDarkModeReducer.mode.toggle
+    });
+    let search = useSelector(state => {
+        return state.searchReducer.value.search
     });
 
     let movies = state.results;
@@ -28,11 +31,10 @@ function MoviesList() {
     let [genreId, setGenreId] = useState(28);
     let [pages, setPages] = useState(1);
 
-
     useEffect(() => {
-        dispatch(getMovie(page, genreId));
+        dispatch(getMovie(page, genreId,search));
         setPages(totalPages);
-    }, [dispatch, page, genreId, totalPages]);
+    }, [dispatch, page, genreId, totalPages,search]);
 
     const chosePage = (page) => {
         return setPage(page);
@@ -45,7 +47,6 @@ function MoviesList() {
             type: mode && mode.toLowerCase()
         }
     })
-
     return (
         <div className='mainPage'>
             <div className={"genresWrap"}>
@@ -70,7 +71,6 @@ function MoviesList() {
                 </MuiThemeProvider>
             </div>
         </div>
-
     );
 }
 

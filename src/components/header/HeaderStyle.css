@@ -52,7 +52,7 @@
     width: 100px;
     height: 40px;
     transition:200ms;
-    margin-left: 600px;
+    margin-left: 450px;
 }
 .headerDark button{
     color: #E8E8E8;
@@ -65,7 +65,7 @@
     width: 100px;
     height: 40px;
     transition:200ms;
-    margin-left: 600px;
+    margin-left: 450px;
 
 }
 .headerLight button:hover{
@@ -83,4 +83,37 @@
     background-color: transparent;
     transition:200ms ease-in-out;
     box-shadow: 0 1px 10px orangered ;
+}
+.searchLight {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: black;
+    border: solid black 1px;
+    border-radius: 25px;
+    margin: 10px 5px 5px 5px;
+    background-color: transparent;
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+}
+.searchLight:focus{
+    outline: 0;
+}
+
+.searchDark {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #E8E8E8;
+    border: solid #E8E8E8 1px;
+    border-radius: 25px;
+    margin: 10px 5px 5px 5px;
+    background-color: transparent;
+    width: 400px;
+    height: 40px;
+    padding: 10px;
+}
+.searchDark:focus{
+    outline: 0;
 }

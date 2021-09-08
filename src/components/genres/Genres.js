@@ -10,8 +10,8 @@ export default function Genres({choseGenre}) {
         return genresReducer
     })
 
-    let mode = useSelector(state1 => {
-        return state1.lightDarkModeReducer.mode.toggle
+    let mode = useSelector(state => {
+        return state.lightDarkModeReducer.mode.toggle
     })
 
     let {genres} = state;

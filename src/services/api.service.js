@@ -9,11 +9,17 @@ const instance = axios.create({
     }
 });
 
-const getMovie = (page, genreId) => async (dispatch) => {
-    let response = await instance.get(`/discover/movie?api_key=${apiKey}&page=${page}&with_genres=${genreId}`);
-    dispatch(loadMovies(response.data));
-}
+const getMovie = (page, genreId, search) => async (dispatch) => {
 
+
+    if (search === undefined) {
+        let response = await instance.get(`/discover/movie?api_key=${apiKey}&page=${page}&with_genres=${genreId}`);
+        dispatch(loadMovies(response.data));
+    } else {
+        let response = await instance.get(`/search/movie?api_key=${apiKey}&page=${page}&with_genres=${genreId}&query=${search}`);
+        dispatch(loadMovies(response.data));
+    }
+}
 
 const getGenre = () => async (dispatch) => {
     let response = await instance.get('/genre/movie/list');
@@ -21,4 +27,5 @@ const getGenre = () => async (dispatch) => {
 }
 
 export {getMovie, getGenre}
+
 

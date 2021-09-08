@@ -47,7 +47,7 @@
 
 .userInfoLight img:hover {
     border-radius: 50%;
-    box-shadow: 1px 1px 20px grey;
+    box-shadow: 1px 1px 20px orangered;
 }
 
 .userInfoDark img:hover {

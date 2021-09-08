@@ -11,6 +11,8 @@ function App() {
         return state1.lightDarkModeReducer.mode.toggle
     })
 
+
+
     return (
         <>
             <Router>

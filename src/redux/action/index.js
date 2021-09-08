@@ -1,3 +1,3 @@
-import {loadGenres, loadMovies} from "./actionFunction";
+import {loadGenres, loadMovies,loadSearchMovies} from "./actionFunction";
 
-export {loadGenres,loadMovies}
+export {loadGenres,loadMovies,loadSearchMovies}
