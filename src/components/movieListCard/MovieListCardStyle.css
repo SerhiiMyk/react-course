@@ -16,7 +16,12 @@
     transition: 300ms;
 }
 
-.movieCard img {
+.movieCardLight img {
+    height: 450px;
+    width: 300px;
+}
+
+.movieCardDark img {
     height: 450px;
     width: 300px;
 }
