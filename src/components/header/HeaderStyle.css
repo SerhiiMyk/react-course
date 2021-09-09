@@ -8,7 +8,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     position: fixed;
     background: powderblue;
     font-family: Stencil Std, fantasy;
@@ -20,7 +20,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     position: fixed;
     background: #2A2650;
     font-family: Stencil Std, fantasy;
@@ -45,28 +45,25 @@
     color: black;
     border: solid black 1px;
     border-radius: 25px;
-    margin: 10px 5px 5px 5px ;
+    /*margin: 10px 5px 5px 450px ;*/
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     background-color: transparent;
     width: 100px;
     height: 40px;
     transition:200ms;
-    margin-left: 450px;
 }
 .headerDark button{
     color: #E8E8E8;
     border: solid #E8E8E8 1px;
     border-radius: 25px;
-    margin: 10px 5px 5px 5px ;
+    /*margin: 10px 5px 5px 450px ;*/
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     background-color: transparent;
     width: 100px;
     height: 40px;
     transition:200ms;
-    margin-left: 450px;
-
 }
 .headerLight button:hover{
     font-weight: 900;
