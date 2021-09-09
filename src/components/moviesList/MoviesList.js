@@ -27,6 +27,8 @@ function MoviesList() {
     let movies = state.results;
     let totalPages = state.total_pages;
 
+    console.log(movies);
+
     let [page, setPage] = useState(1);
     let [genreId, setGenreId] = useState(28);
     let [pages, setPages] = useState(1);
@@ -54,14 +56,19 @@ function MoviesList() {
                     choseGenre={choseGenre}
                     setPage={setPage}/>
             </div>
-            <div className='moviesListWrap'>
+            {movies && <div className='moviesListWrap'>
                 <div className='moviesList'>
                     {movies && movies.map(value => <MovieListCard
                         key={value.id}
                         movie={value}
                     />)}
                 </div>
-            </div>
+            </div>}
+
+            {movies<1 && <div className={`searchError${mode}`}>
+                <p>No results were found for your search</p>
+                <p>please try again...</p>
+            </div>}
             <div>
                 <MuiThemeProvider theme={theme}>
                     {pages > 1 &&

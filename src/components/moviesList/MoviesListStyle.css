@@ -12,4 +12,19 @@
     flex-wrap: wrap;
     width: 1600px;
 }
+.searchErrorLight{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin: 100px 0 500px 0;
+}
+.searchErrorDark{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin: 100px 0 500px 0;
+    color: #E8E8E8;
+}
 
